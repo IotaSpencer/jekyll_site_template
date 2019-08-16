@@ -1,0 +1,100 @@
+# Jekyll configuration
+# now built using gogs!
+
+name: <INSERT NAME HERE>
+author: <INSERT AUTHOR HERE>
+description: <INSERT DESCRIPTION HERE>
+url: <INSERT URL HERE>
+
+# This is used so that the copyright date is prominent, you need to regenerate your site to use a new year
+year: <INSERT YEAR HERE>
+
+skip_related_projects: true
+host: 0.0.0.0
+baseurl: '/'
+repository: <INSERT REPOSITORY HERE>
+share:
+  facebook: true
+  twitter: true
+  gplus: false
+  linkedin: false
+  pinterest: false
+  email: true
+  reddit: true
+
+social:
+  github:
+  gitlab:
+  twitter:
+
+  rss: feed.xml
+  steam:
+  tel:
+  discord:
+  linkedin:
+  stackoverflow:
+
+# Google Analytics key, leave blank to ignore
+google_analytics_key: UA-46280703-5
+# Yandex metrica (https://metrica.yandex.com/) leave blank to ignore or put true to use
+yandex_metrica:
+
+
+# Set this to your disqus shortname to enable comments. Note that the 'comments'
+# setting below must also be true. Individual posts can override 'comments' to
+# disable on a post-by-post basis
+disqus: iotaspencer
+comments: false
+
+permalink: pretty
+
+# Enable for using pages, more details are here: http://jekyllrb.com/docs/pagination/
+paginate: 3
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
+  hard_wrap: true
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: shell
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+timezone: America/New_York
+exclude:
+  - 'README.md'
+  - 'LICENSE'
+  - 'vendor/'
+  - 'node_src'
+  - '*.map'
+  - '.gitignore'
+  - '.idea/'
+  - 'Gemfile*'
+  - '*.gemspec'
+  - '.sass-cache'
+  - '_resume.html'
+sass_dir: _sass/
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-avatar
+  - jemoji
+  - jekyll-mentions
+  - jekyll-include-cache
+  - jekyll-asciinema
+  - jekyll-paginate
+#defaults:
+#  -
+#    scope:
+#      path: "projects"
+#      type: "pages"
+#    values:
+#      layout: "project"
+#      author: "Mr. Hyde"
+#      category: "project"
