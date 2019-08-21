@@ -1,0 +1,45 @@
+<div class="py-2">
+    <!-- Divider Padding -->
+</div>
+<div id="sidebar-recent-posts" class="sidebar bg-dark">
+    <h4>Recent Posts</h4>
+    <ul>
+        {% for post in site.posts limit:5 %}
+        <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div id="sidebar-tag-cloud" class="sidebar bg-dark pt-3">
+    <h4>
+        Tags
+    </h4>
+        {% assign tags = (site.tags | sort:0) %} {% for tag in tags %}
+
+            <a data-placement="right" data-toggle="tooltip" href="/tag/{{ tag[0] | slugify }}" title="{{ tag[1].size }}">
+
+                <span>{{ tag | first }} ({{ tag | last| size }})</span>
+            </a>
+        {% endfor %}
+</div>
+{% if page.page_links %}
+<div class="sidebar bg-dark" id="sidebar-page-links">
+    <h4>Page Links</h4>
+    <ul>
+        {% for name in page.page_links %}
+        <li>
+            <a href="{{ name[1] }}" title="{{ name[0] }}">
+                <span>{{name[0]}}</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+<div id="sidebar-cloudflare-badges" class="sidebar bg-dark">
+    <div>
+        {% include cf-badge.html type='a' skin='dkgray' %}
+    </div>
+</div>
