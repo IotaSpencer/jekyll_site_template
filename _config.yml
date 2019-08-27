@@ -3,11 +3,10 @@ author: <INSERT AUTHOR HERE>
 description: <INSERT DESCRIPTION HERE>
 url: <INSERT URL HERE>
 
-# This is used so that the copyright date is prominent, you need to regenerate your site to use a new year
-year: <INSERT YEAR HERE>
+site_name: <INSERT SITENAME HERE>
 
 skip_related_projects: true
-host: 0.0.0.0
+host: 0.0.0.0 # Local usage
 baseurl: '/'
 repository: <INSERT REPOSITORY HERE>
 share:
